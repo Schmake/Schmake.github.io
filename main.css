@@ -1,33 +1,40 @@
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(57, 41, 41);
 }
 
 a:visited {
     text-decoration: none;
-    color: black;
+    color: rgb(57, 48, 48);
 }
 
 a:hover {
     text-decoration: none;
+    color: black;
 }
 
-
-
-.header {
-    text-align: center;
-    background-color: royalblue;
-    background-position: center;
-    margin-right: 15%;
-    margin-left: 15%;
-}
 
 .topnav {
     background-color: blanchedalmond;
-    margin-right: 15%;
-    margin-left: 15%;
+
+    margin-right: 24%;
+    margin-left: 24%;
+    padding: 0.5%;
+
     font-size: larger;
-    text-align: center;
-    color: rgb(0, 0, 0);
+
+    overflow: hidden;
 }
 
+
+#name {
+    color: black;
+
+    font-size: larger;
+    font-weight: bold;
+    text-align: left;
+}
+
+.topnav a {
+    margin: 5%;
+}
