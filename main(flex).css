@@ -19,28 +19,23 @@ a:hover {
 
     margin-right: 24%;
     margin-left: 24%;
-    padding-bottom: 25px;
-    padding: 0.2%;
-    height: 33px;
+    padding: 0.5%;
 
     font-size: larger;
-    display: flex;
-    justify-content: space-evenly;
-    overflow: auto;
-}
 
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
 
 #name {
     color: black;
 
     font-size: larger;
     font-weight: bold;
-
-    margin-top:0%;
-
 }
 
 .topnav a {
-    margin-top: 0.5%;
+    justify-content: space-around;
     
 }
