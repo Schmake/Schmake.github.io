@@ -1,3 +1,8 @@
+.container {
+    margin-right: 24%;
+    margin-left: 24%;
+}
+
 a {
     text-decoration: none;
     color: rgb(57, 41, 41);
@@ -16,18 +21,16 @@ a:hover {
 .topnav {
     background-color: blanchedalmond;
 
-    margin-right: 24%;
-    margin-left: 24%;
-    padding-bottom: 25px;
     padding: 0.2%;
     height: 33px;
+    border-bottom: rgb(57, 48, 48);
+    border-bottom-style: solid;
 
     font-size: larger;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     overflow: auto;
 }
-
 
 #name {
     color: black;
@@ -39,5 +42,12 @@ a:hover {
 }
 
 .topnav a {
-    margin-top: 0.5%;
+    margin-top: 4px;
+    margin-left: 1.5%;
+    margin-right: 1.5%
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
 }
