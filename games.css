@@ -19,11 +19,11 @@ a:hover {
 }
 
 .topnav {
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
 
     padding: 0.2%;
     height: 33px;
-    border-bottom: rgb(57, 48, 48);
+    border-bottom: rgb(113, 54, 148);
     border-bottom-style: solid;
 
     font-size: larger;
