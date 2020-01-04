@@ -1,0 +1,56 @@
+.container {
+    margin-right: 24%;
+    margin-left: 24%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(57, 41, 41);
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(57, 48, 48);
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.topnav {
+    background-color: blanchedalmond;
+
+    padding: 0.2%;
+    height: 33px;
+    border-bottom: rgb(57, 48, 48);
+    border-bottom-style: solid;
+
+    font-size: larger;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+#name {
+
+    font-size: larger;
+    font-weight: bold;
+
+    margin-top:0%;
+}
+
+#about {
+    color: black;
+}
+
+.topnav a {
+    margin-top: 4px;
+    margin-left: 1.5%;
+    margin-right: 1.5%
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
