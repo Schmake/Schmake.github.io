@@ -51,9 +51,22 @@ a:hover {
 }
 
 footer {
-    position: fixed;
+    border-top: purple;
+    border-top-style: solid;
     bottom: 0;
+    
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 59px;
+    text-align: center;
+
 }
+
+footer p {
+    width: 30%;
+}
+
 
 .content {
     margin-left: 2.5%;

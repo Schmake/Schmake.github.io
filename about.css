@@ -29,7 +29,7 @@ a:hover {
     font-size: larger;
     display: flex;
     justify-content: space-between;
-    overflow: auto;
+    overflow: block;
 }
 
 #name {
@@ -41,6 +41,7 @@ a:hover {
 
 #about {
     color: black;
+    
 }
 
 .topnav a {
@@ -49,15 +50,30 @@ a:hover {
     margin-right: 14px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-}
+
 
 .content {
     max-width: 700px;
     margin: auto;
 
+}
+
+footer {
+    
+    border-top: purple;
+    border-top-style: solid;
+    bottom: 0;
+    
+
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 59px;
+    text-align: center;
+
+}
+
+footer p {
+    width: 30%;
 }
 
 .personaldetails h3 {
@@ -67,11 +83,23 @@ footer {
     margin-top: 30px;
 }
 
-.projects h3 {
+.projects h3, .contact h3 {
     text-align: center;
+    margin-top: 5%;
 }
 
 #description {
     font-size: small;
     text-align: justify;
+}
+
+.contact p {
+    line-height: 8px;
+    margin-top: 17px
+}
+
+#comments {
+    text-align: left;
+    width: 300px;
+    height: 150px;
 }
