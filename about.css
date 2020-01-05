@@ -5,12 +5,12 @@
 
 a {
     text-decoration: none;
-    color: rgb(57, 41, 41);
+    color: rgb(75, 75, 75);
 }
 
 a:visited {
     text-decoration: none;
-    color: rgb(57, 48, 48);
+    color: rgb(75, 75, 75);
 }
 
 a:hover {
@@ -23,7 +23,7 @@ a:hover {
 
     padding: 0.2%;
     height: 33px;
-    border-bottom: rgb(113, 54, 148);
+    border-bottom: purple;
     border-bottom-style: solid;
 
     font-size: larger;
@@ -58,6 +58,38 @@ a:hover {
 
 }
 
+.personaldetails h3 {
+    text-align: center;
+    
+    margin-top: 30px;
+}
+
+.projects h3, .contact h3 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.project p {
+    color: rgb(34,34,34);
+}
+
+#description {
+    font-size: small;
+    text-align: justify;
+}
+
+.contact p {
+    
+    margin-top: 17px
+}
+
+#comments {
+    text-align: left;
+    width: 300px;
+    height: 150px;
+}
+
+
 footer {
     
     border-top: purple;
@@ -74,32 +106,4 @@ footer {
 
 footer p {
     width: 30%;
-}
-
-.personaldetails h3 {
-    text-align: center;
-    
-    
-    margin-top: 30px;
-}
-
-.projects h3, .contact h3 {
-    text-align: center;
-    margin-top: 5%;
-}
-
-#description {
-    font-size: small;
-    text-align: justify;
-}
-
-.contact p {
-    line-height: 8px;
-    margin-top: 17px
-}
-
-#comments {
-    text-align: left;
-    width: 300px;
-    height: 150px;
 }

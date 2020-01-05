@@ -5,12 +5,12 @@
 
 a {
     text-decoration: none;
-    color: rgb(57, 41, 41);
+    color: rgb(75, 75, 75);
 }
 
 a:visited {
     text-decoration: none;
-    color: rgb(57, 48, 48);
+    color: rgb(75, 75, 75);
 }
 
 a:hover {
@@ -23,7 +23,7 @@ a:hover {
 
     padding: 0.2%;
     height: 33px;
-    border-bottom: rgb(113, 54, 148);
+    border-bottom:purple;
     border-bottom-style: solid;
 
     font-size: larger;
