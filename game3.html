@@ -1,0 +1,85 @@
+<head>
+    <meta charset="utf-8" />
+    <title>Game of Life</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas2" width="600" height="400"></canvas>
+<script>
+
+    var canvas = document.getElementById("myCanvas2");
+    var ctx = canvas.getContext("2d");
+
+    var rows = 30
+    var columns = 30
+
+    //function createArray(rows, columns) {
+    var squares = [];
+    for(var i=0; i<rows ; i++) {
+        squares[i] = [];
+        for(var j=0; j<columns; j++) {
+            squares[i][j] = { x: i*10, y: j*10, status: 0}
+            
+        }
+    
+    }
+        
+    //}
+
+    //var mapWidth = 30;
+    //var mapHeight = 30;
+    
+    //var lifeMap = createArray(mapHeight,mapWidth);
+
+    function drawArray() {
+        
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                console.log("x:" + squares[i][j].x + "y:" + squares[i][j].y);
+                
+                ctx.beginPath();
+                ctx.rect(squares[i][j].x,squares[i][j].y,10,10)
+                if (squares[i][j].status === 0) {
+                    ctx.fillStyle = "grey";
+                } else if (squares[i][j].status === 1) {
+                    ctx.fillStyle = "red";
+                }
+                
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+    }
+
+    function mainLoop() {
+        ctx.clearRect(0,0,rows,columns)
+        drawArray();
+
+    }
+
+    document.addEventListener('click', detectClick)
+
+    function detectClick() {
+
+        var i = Math.round(event.offsetX);
+        var j = Math.round(event.offsetY);
+        //squares[Math.round(xPos)][Math.round(yPos)].status = 1;
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                squares[i][j].status = 1;
+                console.log("i: " + i + "j: " + j)
+                console.log(squares[i][j].status)
+                console.log(squares[i][j].x)
+            }
+        }
+    }
+    //console.log(squares[xPos][yPos].status)
+    //console.log(Math.round(event.offsetX))
+    var interval = setInterval(mainLoop, 10)
+    //mainLoop(setInterval,10);
+
+</script>
+</body>

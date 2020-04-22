@@ -1,0 +1,108 @@
+<head>
+    <meta charset="utf-8" />
+    <title>Game of Life</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas2" width="600" height="600"></canvas>
+<script>
+
+    var canvas = document.getElementById("myCanvas2");
+    var ctx = canvas.getContext("2d");
+
+    var rows = 59
+    var columns = 59
+
+    function drawGrid() {
+        var grid = []
+        for(var i=0; i<(rows)*10; i++) {
+            grid[i] = [];
+            for(var j=0; j<columns + 1; j++) {
+                grid[i][j] = { x: i, y: j*10 }
+                
+                ctx.beginPath();
+                ctx.rect(grid[i][j].x,grid[i][j].y,1,1)
+                ctx.rect(grid[i][j].y,grid[i][j].x,1,1)
+                ctx.fillStyle ="black";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+        }
+    }
+
+    
+    //function createArray(rows, columns) {
+    var squares = [];
+    for(var i=0; i<rows ; i++) {
+        squares[i] = [];
+        for(var j=0; j<columns; j++) {
+            squares[i][j] = { x: i*10, y: j*10, status: 0}
+            
+        }
+    
+    }
+        
+    //}
+
+    //var mapWidth = 30;
+    //var mapHeight = 30;
+    
+    //var lifeMap = createArray(mapHeight,mapWidth);
+
+    function drawArray() {
+        
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                
+                
+                ctx.beginPath();
+                ctx.rect(squares[i][j].x,squares[i][j].y,10,10)
+                if (squares[i][j].status === 0) {
+                    ctx.fillStyle = "grey";
+                } else if (squares[i][j].status === 1) {
+                    ctx.fillStyle = "red";
+                }
+                
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+    }
+    
+    function mainLoop() {
+        ctx.clearRect(0,0,rows,columns)
+        drawArray();
+        drawGrid();
+
+    }
+
+    document.addEventListener('click', detectClick)
+
+    function detectClick() {
+
+        var i = Math.round(Math.round(event.offsetX - 7)/10);
+        var j = Math.round(Math.round(event.offsetY - 7)/10);
+        //console.log("i: " + i + " mouse offset X: " + event.offsetX + " j: " + j + " mouse offset Y: " + event.offsetY )
+
+        if(squares[i][j].status === 1) {
+            squares[i][j].status = 0;
+        } else if(squares[i][j].status === 0) {
+            squares[i][j].status = 1;
+        }
+        
+        
+            
+        
+    }
+    
+    var interval = setInterval(mainLoop, 1)
+    
+    //mainLoop(setInterval,10);
+
+</script>
+</body>

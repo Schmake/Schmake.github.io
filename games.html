@@ -168,7 +168,7 @@
                         if(x + ballRadius > paddleX && x - ballRadius < paddleX + paddleWidth) {
                             dy = -dy
                         }
-                        else {
+                        if(y + dy > canvas.height) {
                             alert("Game Over")
                             document.location.reload()
                             clearInterval(interval)
@@ -207,10 +207,16 @@
                         leftPressed = false;
                     }
                 }
-
             </script>
-            
             </body>
+
+            
+            
+
+            
+            
+            
+            
             <footer>
                 <p>
                 <a href="about.html" >Contact Info</a>
