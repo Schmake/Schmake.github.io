@@ -74,13 +74,13 @@
         }
     }
     
-    function mainLoop() {
+    /*function mainLoop() {
         ctx.clearRect(0,0,rows,columns)
         drawArray();
         drawGrid();
 
     }
-
+    */
     document.addEventListener('click', detectClick)
 
     function detectClick() {
@@ -94,13 +94,15 @@
         } else if(squares[i][j].status === 0) {
             squares[i][j].status = 1;
         }
-        
+        drawArray();
+        drawGrid();
         
             
         
     }
-    
-    var interval = setInterval(mainLoop, 1)
+    drawArray();
+    drawGrid();
+    //var interval = setInterval(mainLoop, 1)
     
     //mainLoop(setInterval,10);
 
