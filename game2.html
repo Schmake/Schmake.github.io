@@ -91,7 +91,7 @@
         for(var i=0; i<rows; i++) {
             for (var j=0; j<columns; j++){
                 var lifeCount = 0
-                console.log(squares[i][j].status)
+                
                 if((i-1) > -1 && (j-1) > -1 && squares[i-1][j-1].status === 1) {
                     lifeCount += 1;
                 }
@@ -115,7 +115,7 @@
                 if((i-1) > -1 && (j+1) < 59 && squares[i-1][j+1].status === 1) {
                     lifeCount += 1;
                 }
-                console.log(j+1)
+                
                 if((j+1) < 59 && squares[i][j+1].status === 1) {
                     lifeCount += 1;
                 }
