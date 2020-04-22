@@ -39,7 +39,7 @@
     for(var i=0; i<rows ; i++) {
         squares[i] = [];
         for(var j=0; j<columns; j++) {
-            squares[i][j] = { x: i*10, y: j*10, status: 0}
+            squares[i][j] = { x: i*10, y: j*10, status: 0, status2: 0}
             
         }
     
@@ -124,19 +124,28 @@
                     lifeCount += 1;
                 }
 
-                if(lifeCount < 3) {
-                    squares[i][j].status = 0;
+                if(lifeCount < 2) {
+                    squares[i][j].status2 = 0;
+                }
+                if(lifeCount === 2) {
+                    squares[i][j].status2 = squares[i][j].status;
                 }
                 if(lifeCount === 3) {
-                    squares[i][j].status = 1;
+                    squares[i][j].status2 = 1;
                 }
                 if(lifeCount > 3) {
-                    squares[i][j].status = 0;
+                    squares[i][j].status2 = 0;
                 }
-                drawArray();
-                drawGrid();
+                
             }
         }
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                squares[i][j].status = squares[i][j].status2
+            }
+        }
+        drawArray();
+        drawGrid();
     }
 
     drawArray();
