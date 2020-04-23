@@ -44,7 +44,8 @@
         }
     
     }
-        
+    var gridColour = "#969696";
+    var blockColour = "black";
     function drawArray() {
         
         for(var i=0; i<rows; i++) {
@@ -54,9 +55,9 @@
                 ctx.beginPath();
                 ctx.rect(squares[i][j].x,squares[i][j].y,10,10)
                 if (squares[i][j].status === 0) {
-                    ctx.fillStyle = "grey";
+                    ctx.fillStyle = gridColour;
                 } else if (squares[i][j].status === 1) {
-                    ctx.fillStyle = "red";
+                    ctx.fillStyle = blockColour;
                 }
                 
                 ctx.fill();
@@ -178,5 +179,6 @@
 <button onclick="interval = setInterval(gameLoop, speed);">Start</button> 
 <button onclick="clearInterval(interval);">Stop</button> 
 <button onclick="randomizeGrid()">Randomize</button> 
+<button onclick="randomizeGrid()">Colour Scheme</button> 
 </body>
 
