@@ -85,7 +85,7 @@
             
         
     }
-
+    
     document.addEventListener('keypress', gameLoop)
     function gameLoop() {
         for(var i=0; i<rows; i++) {
@@ -151,12 +151,13 @@
     drawArray();
     drawGrid();
 
+
     
     function randomizeGrid() {
         for(var i=0; i<rows; i++) {
             for (var j=0; j<columns; j++){
                 squares[i][j].status = Math.round(Math.random());
-                console.log(Math.random + " status: " + squares[i][j].status)
+                
             }
         }         
     }
@@ -170,10 +171,12 @@
     */
     
     //var interval = setInterval(gameLoop, 10)
-    var speed = 100
+    var speed = 120;
+    var interval
 
 </script>
-<button onclick="var interval = setInterval(gameLoop, speed)">Start</button> 
-<button onclick="var interval = clearInterval(gameLoop, speed)">Stop</button> 
+<button onclick="interval = setInterval(gameLoop, speed);">Start</button> 
+<button onclick="clearInterval(interval);">Stop</button> 
 <button onclick="randomizeGrid()">Randomize</button> 
 </body>
+
