@@ -172,15 +172,6 @@
         }
     }
 
-    /*function mainLoop() {
-    ctx.clearRect(0,0,rows,columns)
-    drawArray();
-    drawGrid();
-
-    }
-    */
-    
-    //var interval = setInterval(gameLoop, 10)
     var speed = 120;
     var interval
 
@@ -229,6 +220,12 @@
     <li>2 or 3 live neighbours; it will live.</li>
     <li>4 or greater live neighbours; it will die..</li>
     <p> A cell is born when it has exactly 3 live neighbours. </p>
+
+    <h3>Controls</h3>
+    <li>You can click on a cell to change it from one status to another (alive to dead, or dead to alive).</li>
+    <li>The Next button iterates the game, and the Start button begins a continuous iteration. </li>
+    <li>You can also assign each cell a status of 'alive' or 'dead' randomly with the Randomize button, or change the aesthetic of
+        the game with the Colour Scheme dropdown menu. </li>
         
 </body>
 
