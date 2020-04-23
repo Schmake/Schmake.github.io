@@ -1,4 +1,5 @@
 <head>
+    <link rel="stylesheet" type="text/css" href="game2.css">
     <meta charset="utf-8" />
     <title>Game of Life</title>
     <style>
@@ -6,8 +7,8 @@
         canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
-<body>
-
+<body class="contentbox">
+        <h1> Game of Life </h1>
 <canvas id="myCanvas2" width="600" height="600"></canvas>
 <script>
 
@@ -162,6 +163,14 @@
             }
         }         
     }
+    
+    function clearGrid() {
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                squares[i][j].status = 0;
+            }
+        }
+    }
 
     /*function mainLoop() {
     ctx.clearRect(0,0,rows,columns)
@@ -175,10 +184,51 @@
     var speed = 120;
     var interval
 
+    function changeColour(colour1,colour2) {
+        gridColour = colour1;
+        blockColour = colour2;
+        drawArray;
+        drawGrid
+    }
+
+
 </script>
-<button onclick="interval = setInterval(gameLoop, speed);">Start</button> 
-<button onclick="clearInterval(interval);">Stop</button> 
-<button onclick="randomizeGrid()">Randomize</button> 
-<button onclick="randomizeGrid()">Colour Scheme</button> 
+    <div class="buttons">
+        <button onclick="gameLoop()">Next</button>
+        <button onclick="interval = setInterval(gameLoop, speed);">Start</button> 
+        <button onclick="clearInterval(interval);">Stop</button> 
+        <button onclick="clearInterval(interval); clearGrid()">Clear</button> 
+        <button onclick="randomizeGrid()">Randomize</button> 
+        <div class="dropdown">
+            <button class="dropbtn" onclick="">Colour Scheme</button> 
+            <div class="dropdown-content">
+                <button onclick="changeColour('#969696', 'black')">Crossword</button>
+                <button onclick="changeColour('blue', 'yellow')">Yellow Submarine</button>
+            </div>
+
+        </div>
+        <!--<div class="dropdown">
+            <button class="dropbtn" onclick="">Speed</button> 
+            <div class="dropdown-content">
+                <button onclick="speed = 2000">1</button>
+                <button onclick="speed = 1000">2</button>
+                <button onclick="speed = 500">3</button>
+                <button onclick="speed = 200">4</button>
+                <button onclick="speed = 100">5</button>
+            </div>
+
+        </div>-->
+        
+    </div>
+    <h3>Rules</h3>
+    <p> The Game of Life has just a few simple rules governing its behaviour. </p>
+    <p> They concern whether a given cell is 'alive' or 'dead.' </p>
+    <p> A cell's neighbours are comprised of the 8 cells which lie adjacent. </p>
+    <p>For live cells -</p>
+    <li>Fewer than 2 live neighbours; it will die.</li>
+    <li>2 or 3 live neighbours; it will live.</li>
+    <li>4 or greater live neighbours; it will die..</li>
+    <p> A cell is born when it has exactly 3 live neighbours. </p>
+        
 </body>
 
