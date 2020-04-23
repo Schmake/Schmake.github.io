@@ -87,7 +87,7 @@
     }
 
     document.addEventListener('keypress', gameLoop)
-    function gameLoop(e) {
+    function gameLoop() {
         for(var i=0; i<rows; i++) {
             for (var j=0; j<columns; j++){
                 var lifeCount = 0
@@ -143,13 +143,23 @@
             for (var j=0; j<columns; j++){
                 squares[i][j].status = squares[i][j].status2
             }
-        }
+        }                
         drawArray();
         drawGrid();
     }
 
     drawArray();
     drawGrid();
+
+    
+    function randomizeGrid() {
+        for(var i=0; i<rows; i++) {
+            for (var j=0; j<columns; j++){
+                squares[i][j].status = Math.round(Math.random());
+                console.log(Math.random + " status: " + squares[i][j].status)
+            }
+        }         
+    }
 
     /*function mainLoop() {
     ctx.clearRect(0,0,rows,columns)
@@ -158,8 +168,12 @@
 
     }
     */
-
     
+    //var interval = setInterval(gameLoop, 10)
+    var speed = 100
 
 </script>
+<button onclick="var interval = setInterval(gameLoop, speed)">Start</button> 
+<button onclick="var interval = clearInterval(gameLoop, speed)">Stop</button> 
+<button onclick="randomizeGrid()">Randomize</button> 
 </body>
