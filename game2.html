@@ -184,7 +184,7 @@
 
 
 </script>
-    <div class="buttons">
+    <form class="buttons">
         <button onclick="gameLoop()">Next</button>
         <button onclick="interval = setInterval(gameLoop, speed);">Start</button> 
         <button onclick="clearInterval(interval);">Stop</button> 
@@ -210,7 +210,7 @@
 
         </div>-->
         
-    </div>
+    </form>
     <h3>Rules</h3>
     <p> The Game of Life has just a few simple rules governing its behaviour. </p>
     <p> They concern whether a given cell is 'alive' or 'dead.' </p>
@@ -222,7 +222,9 @@
     <p> A cell is born when it has exactly 3 live neighbours. </p>
 
     <h3>Controls</h3>
-    <li>You can click on a cell to change it from one status to another (alive to dead, or dead to alive).</li>
+    <li>You can click on a cell to change it from one status to another (alive to dead, or dead to alive). 
+        With the default colour scheme, an alive cell is black. 
+    </li>
     <li>The Next button iterates the game, and the Start button begins a continuous iteration. </li>
     <li>You can also assign each cell a status of 'alive' or 'dead' randomly with the Randomize button, or change the aesthetic of
         the game with the Colour Scheme dropdown menu. </li>
